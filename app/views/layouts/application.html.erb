@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -122,4 +123,130 @@
     <%= javascript_include_tag "application" %>
 
   </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Cleartime TV" %></title>
+    <%= csrf_meta_tags %>
+    <script>
+      $(function(){
+      $('#myCarousel').carousel();
+        });
+    </script>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=501906479910208";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <%#= Le HTML5 shim, for IE6-8 support of HTML elements %>
+    <!-- [if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif] -->
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <%#= For third-generation iPad with high-resolution Retina display: %>
+    <%#= Size should be 144 x 144 pixels %>
+    <%#= favicon_link_tag 'favicon.ico', :type => 'image/png', :sizes => '144x144' %>
+
+    <%#= For iPhone with high-resolution Retina display: %>
+    <%#= Size should be 114 x 114 pixels %>
+    <%#= favicon_link_tag 'favicon.ico', :type => 'image/png', :sizes => '114x114' %>
+
+    <%#= For first- and second-generation iPad: %>
+    <%#= Size should be 72 x 72 pixels %>
+    <%#= favicon_link_tag 'favicon.ico', :type => 'image/png', :sizes => '72x72' %>
+
+    <%#= For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: %>
+    <%#= Size should be 57 x 57 pixels %>
+    <%#= favicon_link_tag 'favicon.ico', :type => 'image/png' %>
+
+    <%#= For all other devices %>
+    <%#= Size should be 32 x 32 pixels %>
+    <%#= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "Cleartime TV", root_path, class: 'brand' %>
+          <!--<a class="brand" href="">Cleartime</a>-->
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li class="">
+                <%= link_to "Home", root_path %>
+              </li>
+              <li class="">
+                <%= link_to("Packages", root_path(anchor: "pack")) %>
+                <!--<%= link_to "Packages", root_path, :anchor => "pack" %>-->
+              </li>
+              <li class="">
+                <%= link_to "Contact", contact_new_path %>
+              </li>
+              <li class="">
+                <%= link_to "About Us", welcome_about_path %>
+              </li>
+              <li class="">
+                <%= link_to "Referrals", welcome_referral_path %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row text-center">
+        <%= bootstrap_flash %>
+      </div>
+      <div class="row">
+        <%= render_breadcrumbs %>
+        
+      </div>
+    </div>
+      <%= yield %>
+    <!-- </div> -->
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="span6 columns">        
+            <p>Tell us about your experience! <a href="https://www.facebook.com/pages/Cleartime-TV-LLC/737683746259428"><img src="/assets/facebook.png"></a></p>
+            <p>On Twitter? Follow us! <a href=""><img src="/assets/tweet.png"></a></p>
+            <p>Website created by <a href="http://www.forrestwidmer.com/">forrestwidmer.com</a></p>
+          </div>
+
+          <div class="span6 columns text-right">
+            <p><a href="#">Back to top</a></p>
+              <p>Owned and Operated by: Cleartime TV LLC</p>
+              <p>(602)531-7375</p>
+              <p>info@cleartimetv.com</p>
+              <p>Copyright<img src="/assets/copyright.png"></a>2014 Cleartime TV LLC</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Javascripts ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+
+  </body>
+>>>>>>> 0b9fd93373d60263dc087d707d38c7a095855940
 </html>
